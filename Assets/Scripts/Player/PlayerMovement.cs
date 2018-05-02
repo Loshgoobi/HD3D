@@ -36,7 +36,7 @@ namespace CompleteProject
             float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
 
             // Move the player around the scene.
-            Move (h, v);
+            Move (-h, -v);
 
             // Turn the player to face the mouse cursor.
             Turning ();
