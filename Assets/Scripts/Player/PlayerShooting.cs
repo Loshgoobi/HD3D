@@ -31,7 +31,7 @@ public class PlayerShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+		if(Input.GetButton("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
         }
@@ -73,7 +73,7 @@ public class PlayerShooting : MonoBehaviour
             {
                 enemyHealth.TakeDamage(damagePerShot, shootHit.point);
             }
-            //gunLine.SetPosition (1, shootHit.point);
+            gunLine.SetPosition (1, shootHit.point);
         }
         else
         {
