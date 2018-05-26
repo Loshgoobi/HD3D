@@ -14,7 +14,8 @@ MonoBehaviour:
   aName: Grenade
   aSprite: {fileID: 0}
   aSound: {fileID: 0}
-  aBaseCoolDown: 3
-  projectileForce: 1000
+  aBaseCoolDown: 10
+  manaCost: 20
+  projectileForce: 500
   projectile: {fileID: 54795899296229536, guid: 53201e194e1243c46a4cc9de540d6da1,
     type: 2}

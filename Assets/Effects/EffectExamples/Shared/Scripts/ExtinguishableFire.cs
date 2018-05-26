@@ -27,8 +27,9 @@ public class ExtinguishableFire : MonoBehaviour
 
     public void Extinguish()
     {
-        if (m_isExtinguished)
-            return;
+		if (m_isExtinguished)
+			return;
+		
 
         m_isExtinguished = true;
         StartCoroutine(Extinguishing());

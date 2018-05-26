@@ -8,6 +8,7 @@ public abstract class Ability : ScriptableObject
     public Sprite aSprite;
     public AudioClip aSound;
     public float aBaseCoolDown = 1f;
+    public int manaCost;
 
     public abstract void Initialize(GameObject obj);
     public abstract void TriggerAbility();

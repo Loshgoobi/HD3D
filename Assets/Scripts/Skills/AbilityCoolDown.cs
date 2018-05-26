@@ -8,9 +8,11 @@ public class AbilityCoolDown : MonoBehaviour
     public string abilityButtonAxisName = "Fire1";
     public Image darkMask;
     public Text coolDownTextDisplay;
+    public PlayerMana manaP;
 
     [SerializeField] private Ability ability;
     [SerializeField] private GameObject weaponHolder;
+    
     private Image myButtonImage;
     private AudioSource abilitySource;
     private float coolDownDuration;
@@ -76,6 +78,7 @@ public class AbilityCoolDown : MonoBehaviour
 
         abilitySource.clip = ability.aSound;
         abilitySource.Play();
+        manaP.SpendMana(ability.manaCost);
         ability.TriggerAbility();
     }
 }

@@ -17,12 +17,25 @@ using UnityEngine.UI;
     }
     // Update is called once per frame
     void Update () {
-        if(currentMana < 100 )
-        {
-            currentMana = currentMana + 0.1f;
-        }
+            if(currentMana < 100 )
+            {
+                currentMana = currentMana + 0.1f;
+                manaSlider.value = currentMana;
+            }
 		
 	    }
+
+    public void SpendMana(int amount)
+    {
+        if (amount <= currentMana)
+        {
+            currentMana -= amount;
+            manaSlider.value = currentMana;
+        }
+        else return;
+        
+    }
+
     }
 
 

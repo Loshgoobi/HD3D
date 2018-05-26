@@ -19,6 +19,11 @@ public class EnemySpawn : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(enemy, spawnPoints.position, spawnPoints.rotation);
+        if(enemy != null)
+        {
+            Instantiate(enemy, spawnPoints.position, spawnPoints.rotation);
+        }
+        
+        
     }
 }

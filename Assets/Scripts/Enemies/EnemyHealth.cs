@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
     public AudioClip deathClip;
+    public Slider healthSlider;
 
 
     //Animator anim;
@@ -36,6 +38,30 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int amount)
+    {
+        if (isDead)
+            return;
+
+        //enemyAudio.Play ();
+
+
+        currentHealth -= amount;
+
+
+
+        if (healthSlider != null)
+        {
+            // Set the health bar's value to the current health.
+            healthSlider.value = currentHealth;
+        }
+
+
+        if (currentHealth <= 0)
+        {
+            Death();
+        }
+    }
 
     public void TakeDamage (int amount, Vector3 hitPoint)
     {
@@ -44,8 +70,18 @@ public class EnemyHealth : MonoBehaviour
 
         //enemyAudio.Play ();
 
-        currentHealth -= amount;
-            
+        
+            currentHealth -= amount;
+
+
+
+        if (healthSlider != null)
+        {
+            // Set the health bar's value to the current health.
+            healthSlider.value = currentHealth;
+        }
+
+
         hitParticles.transform.position = hitPoint;
         hitParticles.Play();
 

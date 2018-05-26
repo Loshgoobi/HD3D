@@ -13,11 +13,17 @@ using UnityEngine.SceneManagement;
         public AudioClip deathClip;                                 // The audio clip to play when the player dies.
         public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
         public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
+        public int firstStage;
+        public int secondStage;
+        public GameObject fullhealth;
+        public GameObject firstStageObj;
+        public GameObject secondStageObj;
+        public GameObject destroyed;
 
-
-        //Animator anim;                                              // Reference to the Animator component.
+    //Animator anim;                                              // Reference to the Animator component.
         AudioSource playerAudio;                                    // Reference to the AudioSource component.
         ParticleSystem hitParticles;
+        ParticleSystem destructionParticles;
         //PlayerMovement playerMovement;                              // Reference to the player's movement.
         PlayerShooting playerShooting;                                // Reference to the PlayerShooting script.
          BoxCollider boxCollider;
@@ -27,12 +33,13 @@ using UnityEngine.SceneManagement;
 
         void Awake ()
         {
-            // Setting up the references.
-            //anim = GetComponent <Animator> ();
-            //playerAudio = GetComponent <AudioSource> ();
-           // playerMovement = GetComponent <PlayerMovement> ();
+        // Setting up the references.
+        //anim = GetComponent <Animator> ();
+        //playerAudio = GetComponent <AudioSource> ();
+        // playerMovement = GetComponent <PlayerMovement> ();
+            destructionParticles = GetComponent <ParticleSystem> ();
             playerShooting = GetComponentInChildren <PlayerShooting> ();
-            boxCollider = GetComponent<BoxCollider>();
+            boxCollider = GetComponent <BoxCollider> ();
             // Set the initial health of the player.
             currentHealth = startingHealth;
         }
@@ -72,9 +79,26 @@ using UnityEngine.SceneManagement;
             // Play the hurt sound effect.
             //playerAudio.Play ();
 
+            if( currentHealth <= firstStage && currentHealth > secondStage)
+            {
+                destructionParticles.Play();
+                Destroy(fullhealth, destructionParticles.duration);
+                firstStageObj.SetActive(true);
+
+            }
+            else if (currentHealth <= secondStage && !isDead)
+            {
+                destructionParticles.Play();
+                Destroy(firstStageObj, destructionParticles.duration);
+                secondStageObj.SetActive(true);
+            }
+
             // If the player has lost all it's health and the death flag hasn't been set yet...
             if(currentHealth <= 0 && !isDead)
             {
+                destructionParticles.Play();
+                Destroy(secondStageObj, destructionParticles.duration);
+                destroyed.SetActive(true);
                 // ... it should die.
                 Death ();
             }

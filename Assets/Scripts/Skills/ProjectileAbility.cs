@@ -14,7 +14,7 @@ public class ProjectileAbility : Ability
     {
         launcher = obj.GetComponent<ProjectileShootTriggerable>();
         launcher.projectileForce = projectileForce;
-        launcher.projectile = projectile;
+        launcher.projectiles = projectile;
     }
 
     public override void TriggerAbility()
