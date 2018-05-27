@@ -9,11 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6794ef9cff6efb242bd12813b50a5933, type: 3}
-  m_Name: Kill All
+  m_Name: KillAll
   m_EditorClassIdentifier: 
-  aName: Kill All
+  aName: New Ability
   aSprite: {fileID: 0}
   aSound: {fileID: 0}
-  aBaseCoolDown: 300
+  aBaseCoolDown: 200
   manaCost: 75
-  enemies: []

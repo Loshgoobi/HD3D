@@ -4,6 +4,7 @@ using System.Collections;
 public class ProjectileShootTriggerable : MonoBehaviour
 {
 
+
     [HideInInspector] public Rigidbody projectiles;                          // Rigidbody variable to hold a reference to our projectile prefab
 
     public Transform bulletSpawn;                           // Transform variable to hold the location where we will spawn our projectile
