@@ -79,6 +79,8 @@ public class AbilityCoolDown : MonoBehaviour
         abilitySource.clip = ability.aSound;
         abilitySource.Play();
         manaP.SpendMana(ability.manaCost);
+        Debug.Log("mana spent");
         ability.TriggerAbility();
+        Debug.Log("Triggered");
     }
 }

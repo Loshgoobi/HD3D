@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -7768,10 +7768,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1206867402364762, guid: 53201e194e1243c46a4cc9de540d6da1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53201e194e1243c46a4cc9de540d6da1, type: 2}
   m_IsPrefabParent: 0
@@ -8801,11 +8797,6 @@ Prefab:
       propertyPath: manaSlider
       value: 
       objectReference: {fileID: 796893759}
-    - target: {fileID: 114571528774693314, guid: fad5e162714523744891aad2ba6b17a8,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fad5e162714523744891aad2ba6b17a8, type: 2}
   m_IsPrefabParent: 0
@@ -9244,7 +9235,7 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1546013315382850, guid: 141d0bc26b5d735458292b917fb9fd99, type: 2}
+    - target: {fileID: 1148286976658658, guid: 141d0bc26b5d735458292b917fb9fd99, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -14918,7 +14909,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4039899338247424, guid: 7c0cf0578dfeda54d8a0b9962b8a3f82, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -25.93
+      value: -31.227
       objectReference: {fileID: 0}
     - target: {fileID: 4039899338247424, guid: 7c0cf0578dfeda54d8a0b9962b8a3f82, type: 2}
       propertyPath: m_LocalPosition.y

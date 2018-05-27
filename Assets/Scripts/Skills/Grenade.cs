@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour {
 
-    public float delay = 3f;
-    public float radius = 5f;
-    public float force = 700f;
+    public float delay = 3.0f;
+    public float radius = 5.0f;
+    public float force = 700.0f;
+    public int damage = 50;
 
     public GameObject explosionEffect;
+
+    private GameObject instantiatedEffect;
+    private ParticleSystem ps;
 
     float countdown;
     bool hasExploded = false;
@@ -18,24 +22,29 @@ public class Grenade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         countdown = delay;
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
         countdown -= Time.deltaTime;
         if (countdown <= 0f && !hasExploded)
         {
+            hasExploded = true;
             Debug.Log(hasExploded);
             Explode();
-            hasExploded = true;
-            
-            
+            Debug.Log(hasExploded);
+            Destroy(gameObject);
+            Destroy(explosionEffect);
         }
-	}
+
+    }
 
     void Explode()
     {
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+        instantiatedEffect = Instantiate(explosionEffect, transform.position, transform.rotation);
+        ps = instantiatedEffect.GetComponent<ParticleSystem>();
+
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
@@ -46,15 +55,16 @@ public class Grenade : MonoBehaviour {
         foreach(Collider nearbyObject in colliders)
         {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
-            if (rb != null)
+            EnemyHealth eh = nearbyObject.GetComponent<EnemyHealth>();
+            if (rb != null && eh != null)
             {
                 rb.AddExplosionForce(force, transform.position, radius);
+                eh.TakeDamage(damage/2);
             }
 
-            nearbyObject.GetComponent<EnemyHealth>().TakeDamage(50);
 
         }
-        Destroy(explosionEffect);
-        Destroy(gameObject);
+        Destroy(instantiatedEffect, ps.duration);
+        
     }
 }

@@ -298,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1611681391767704
 GameObject:
   m_ObjectHideFlags: 1
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   darkMask: {fileID: 114576431212790210}
   coolDownTextDisplay: {fileID: 114785784476839360}
   manaP: {fileID: 0}
-  ability: {fileID: 11400000, guid: d81f449b3a07f8a4b9e81b6516bbbba9, type: 2}
+  ability: {fileID: 11400000, guid: 08f56dc57b054644a9fe2cce52fdfc21, type: 2}
   weaponHolder: {fileID: 0}
 --- !u!222 &222036426509753748
 CanvasRenderer:

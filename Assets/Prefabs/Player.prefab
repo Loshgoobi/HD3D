@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 136555262605870370}
   - component: {fileID: 114188166887746256}
   - component: {fileID: 82613488041942478}
+  - component: {fileID: 114855096645778408}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -59,6 +60,21 @@ GameObject:
   - component: {fileID: 108239585890837634}
   m_Layer: 0
   m_Name: Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1518378810984702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4003386334871010}
+  m_Layer: 0
+  m_Name: GrenadeSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +118,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4003386334871010
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518378810984702}
+  m_LocalRotation: {x: -0.21643952, y: 0, z: 0, w: 0.97629607}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4582505895073720}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -25, y: 0, z: 0}
 --- !u!4 &4029926327008444
 Transform:
   m_ObjectHideFlags: 1
@@ -154,6 +183,7 @@ Transform:
   m_Children:
   - {fileID: 4029926327008444}
   - {fileID: 4089117817815450}
+  - {fileID: 4003386334871010}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 100.80401, z: 0}
@@ -419,7 +449,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536634207501738}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3a93c90e9466134eb9cee643e5d9457, type: 3}
   m_Name: 
@@ -434,7 +464,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1348361297546810}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0868b044073d6ee40a84d44887f2b700, type: 3}
   m_Name: 
@@ -442,6 +472,20 @@ MonoBehaviour:
   startingMana: 100
   currentMana: 100
   manaSlider: {fileID: 0}
+--- !u!114 &114855096645778408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1348361297546810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b11567be935ba740a93a60e1a28eb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectiles: {fileID: 0}
+  bulletSpawn: {fileID: 4003386334871010}
+  projectileForce: 250
 --- !u!114 &114865651655333222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -798,7 +842,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1565127712
+  randomSeed: 863971447
   InitialModule:
     serializedVersion: 3
     enabled: 1
