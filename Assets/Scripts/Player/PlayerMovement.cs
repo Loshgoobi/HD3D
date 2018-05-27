@@ -33,10 +33,10 @@ namespace CompleteProject
         void FixedUpdate ()
         {
 			// permit each player to control his own character
-			if (!isLocalPlayer)
+			/*if (!isLocalPlayer)
 			{
-				return;
-			}
+				Debug.Log ("Not Local Player.");
+			}*/
 
             // Store the input axes.
             float h = CrossPlatformInputManager.GetAxisRaw("Horizontal");
