@@ -3,7 +3,14 @@ using System.Collections;
 
 public class CameraFacingBillboard : MonoBehaviour
 {
-    public Camera m_Camera;
+    //public Camera m_Camera;
+    private Camera m_Camera;
+
+    void Start()
+    {
+        m_Camera = FindObjectOfType<Camera>();
+        Debug.Log("camera name : " + m_Camera.name);
+    }
 
     void Update()
     {

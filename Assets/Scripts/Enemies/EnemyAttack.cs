@@ -4,7 +4,7 @@ using System.Collections;
 
     public class EnemyAttack : MonoBehaviour
     {
-        public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
+        
         public int attackDamage = 10;               // The amount of health taken away per attack.
 
 
@@ -55,7 +55,7 @@ using System.Collections;
             timer += Time.deltaTime;
 
             // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-            if(timer >= timeBetweenAttacks && playerInRange /*&& enemyHealth.currentHealth > 0*/)
+            if(playerInRange /*&& enemyHealth.currentHealth > 0*/)
             {
                 // ... attack.
                 Attack ();
@@ -72,14 +72,13 @@ using System.Collections;
 
         void Attack ()
         {
-            // Reset the timer.
-            timer = 0f;
-
+         
             // If the player has health to lose...
             if(baseHealth.currentHealth > 0)
             {
             // ... damage the player.
             baseHealth.TakeDamage (attackDamage);
+            Destroy(gameObject);
             }
         }
     }

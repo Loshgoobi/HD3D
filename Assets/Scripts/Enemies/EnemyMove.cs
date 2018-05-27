@@ -3,70 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMove : MonoBehaviour {
+
+using UnityEngine;
+using System.Collections;
+
+public class EnemyMove : MonoBehaviour
+{
+    Transform target;               // Reference to the target's position.
+    EnemyHealth enemyHealth;        // Reference to this enemy's health.
+    NavMeshAgent nav;               // Reference to the nav mesh agent.
 
 
-    
-    Transform target;
-    NavMeshAgent agent;
-    GameObject playerBase;
-    BaseHealth baseManager;
-
-    //serialiser la target
-
-
-	// Use this for initialization
-	void Start () {
-        target = GameObject.FindGameObjectWithTag("Target").transform;
-        playerBase = GameObject.FindGameObjectWithTag("Base");
-        baseManager = playerBase.GetComponent<BaseHealth>();
-        
-        agent = GetComponent<NavMeshAgent>();
-        agent.destination = target.position;
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (agent.remainingDistance <= 1.0f) 
-        {
-            baseManager.TakeOneDamage();
-            Destroy(agent.gameObject);    
-        }	
-	}
-
-    /*
-
-    Transform target;
-    Transform playerBase;
-    NavMeshAgent nav;
-    EnemyHealth enemyHealth;
-    
-    private void Awake()
+    void Start()
     {
+        // Set up the references.
         target = GameObject.FindGameObjectWithTag("Target").transform;
-        playerBase = GameObject.FindGameObjectWithTag("Base").transform;
-        enemyHealth = GetComponent<EnemyHealth>();
 
 
         nav = GetComponent<NavMeshAgent>();
-    }
-
-    private void Update()
-    {
         nav.SetDestination(target.position);
-        if (nav.remainingDistance == 0)
-        {
-            Destroy(nav.gameObject);
-        }
+        Debug.Log("Destination : " + nav.destination);
+        Debug.Log("Remaining distance : " + nav.remainingDistance);
     }
 
-    public void Attack()
+    // Update is called once per frame
+
+
+    void Update()
     {
-        if (nav.remainingDistance == 0)
+        float dist = Vector3.Distance(target.transform.position, transform.position);
+        if (dist <= 1.0f)
         {
-            Destroy(nav.gameObject);
+            Destroy(gameObject);
         }
     }
-    */
 }

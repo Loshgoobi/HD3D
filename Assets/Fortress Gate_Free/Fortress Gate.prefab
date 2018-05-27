@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 9509196}
   m_Layer: 0
   m_Name: Fortress Gate
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1011,15 +1011,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9491027e1373f894cb2a1cd017d9f847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 2000
   currentHealth: 0
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
   deathClip: {fileID: 0}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  firstStage: 50
-  secondStage: 30
+  firstStage: 1200
+  secondStage: 500
   fullhealth: {fileID: 1135920077119720}
   firstStageObj: {fileID: 1162374174573558}
   secondStageObj: {fileID: 1705594184376976}
