@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2399412}
   - component: {fileID: 114662470643074606}
   - component: {fileID: 54601891752389936}
-  - component: {fileID: 64384616738375610}
+  - component: {fileID: 64846613120735112}
   m_Layer: 0
-  m_Name: Missil_01
+  m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 132654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.59675, y: 3.78, z: -11.912562}
-  m_LocalScale: {x: 1.26, y: 1, z: 0.58}
+  m_LocalScale: {x: 1.02, y: 1, z: 0.58}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64384616738375610
+--- !u!64 &64846613120735112
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,4 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotateSpeed: 100
+  rotateSpeed: 50
+  radius: 5
+  force: 700
+  damage: 50
+  explosionEffect: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+    type: 2}

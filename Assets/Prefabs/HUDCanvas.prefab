@@ -368,7 +368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1917721572862238
 GameObject:
   m_ObjectHideFlags: 1
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd4fea2707f72a4391877a13e0a3d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCode: 38
+  keyCode: 324
   darkMask: {fileID: 114281835320449366}
   coolDownTextDisplay: {fileID: 114155262866663092}
   manaP: {fileID: 0}
@@ -826,11 +826,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd4fea2707f72a4391877a13e0a3d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCode: 0
+  keyCode: 32
   darkMask: {fileID: 114604241315923760}
   coolDownTextDisplay: {fileID: 114280110402107066}
   manaP: {fileID: 0}
-  ability: {fileID: 11400000, guid: e2785bb2b7671d34794f1a217f1a12a0, type: 2}
+  ability: {fileID: 11400000, guid: eb1581e438f8e1c49aa172d0785f348b, type: 2}
   weaponHolder: {fileID: 0}
 --- !u!114 &114448164572193366
 MonoBehaviour:

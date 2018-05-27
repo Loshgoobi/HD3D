@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7ed2726c2493274c968bcec69327a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 008507c04390942468d9e6e3e810741a, type: 3}
   m_Name: Missile
   m_EditorClassIdentifier: 
   aName: Missile
@@ -16,6 +16,4 @@ MonoBehaviour:
   aSound: {fileID: 0}
   aBaseCoolDown: 20
   manaCost: 20
-  projectileForce: 500
-  projectile: {fileID: 54601891752389936, guid: 3db888a07c8c1ae42b3ff9ff707231d0,
-    type: 2}
+  missile: {fileID: 54601891752389936, guid: 3db888a07c8c1ae42b3ff9ff707231d0, type: 2}

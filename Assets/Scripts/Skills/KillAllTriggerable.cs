@@ -10,13 +10,13 @@ public class KillAllTriggerable : MonoBehaviour {
         Debug.Log("In Kill All");
 
         EnemyHealth[] enemies = FindObjectsOfType<EnemyHealth>();
-        Debug.Log("number of enemies : " + enemies.Length);
+        //Debug.Log("number of enemies : " + enemies.Length);
 
 
 
         for (int i = 0; i <= enemies.Length; i++)
         {
-            Debug.Log("number of enemies : " + enemies[i].name);
+            //Debug.Log("number of enemies : " + enemies[i].name);
             enemies[i].TakeDamage(enemies[i].currentHealth);
         }
     }

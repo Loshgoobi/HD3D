@@ -10,10 +10,17 @@ public class HomingMissile : MonoBehaviour
     
     public float speed = 5f;
     public float rotateSpeed = 200f;
+    public float radius = 5.0f;
+    public float force = 700.0f;
+    public int damage = 50;
+
+    public GameObject explosionEffect;
 
     private Rigidbody rb;
     private Transform missile;
     private Transform target;
+    private GameObject instantiatedEffect;
+    private ParticleSystem ps;
 
 
     // Use this for initialization
@@ -36,8 +43,8 @@ public class HomingMissile : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        // Put a particle effect here
         Destroy(gameObject);
+        Explode();
     }
 
     GameObject FindClosestToTarget(Transform target, string tag)
@@ -61,5 +68,33 @@ public class HomingMissile : MonoBehaviour
             }
         }
         return closest;
+    }
+
+    void Explode()
+    {
+        instantiatedEffect = Instantiate(explosionEffect, transform.position, transform.rotation);
+        ps = instantiatedEffect.GetComponent<ParticleSystem>();
+
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+
+        int lengthCollider = colliders.Length;
+        Debug.Log(lengthCollider);
+
+
+        foreach (Collider nearbyObject in colliders)
+        {
+            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+            EnemyHealth eh = nearbyObject.GetComponent<EnemyHealth>();
+            if (rb != null && eh != null)
+            {
+                rb.AddExplosionForce(force, transform.position, radius);
+                eh.TakeDamage(damage / 2);
+            }
+
+
+        }
+        Destroy(instantiatedEffect, ps.duration);
+
     }
 }
