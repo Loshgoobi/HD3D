@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class AbilityCoolDown : MonoBehaviour
 {
-
-    public string abilityButtonAxisName = "Fire1";
+    public KeyCode keyCode;
+    //public string abilityButtonAxisName;
     public Image darkMask;
     public Text coolDownTextDisplay;
     public PlayerMana manaP;
@@ -23,6 +23,7 @@ public class AbilityCoolDown : MonoBehaviour
     void Start()
     {
         Initialize(ability, weaponHolder);
+        
     }
 
     public void Initialize(Ability selectedAbility, GameObject weaponHolder)
@@ -44,7 +45,7 @@ public class AbilityCoolDown : MonoBehaviour
         if (coolDownComplete)
         {
             AbilityReady();
-            if (Input.GetButtonDown(abilityButtonAxisName))
+            if (Input.GetKeyDown(keyCode))
             {
                 ButtonTriggered();
             }
@@ -71,6 +72,7 @@ public class AbilityCoolDown : MonoBehaviour
 
     private void ButtonTriggered()
     {
+        Debug.Log("button triggered");
         nextReadyTime = coolDownDuration + Time.time;
         coolDownTimeLeft = coolDownDuration;
         darkMask.enabled = true;
@@ -78,6 +80,7 @@ public class AbilityCoolDown : MonoBehaviour
 
         abilitySource.clip = ability.aSound;
         abilitySource.Play();
+        Debug.Log("mana cost" + ability.manaCost);
         manaP.SpendMana(ability.manaCost);
         Debug.Log("mana spent");
         ability.TriggerAbility();

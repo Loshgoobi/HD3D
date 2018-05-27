@@ -28,7 +28,7 @@ public class EnemyMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (agent.remainingDistance <= 1f) 
+        if (agent.remainingDistance <= 1.0f) 
         {
             baseManager.TakeOneDamage();
             Destroy(agent.gameObject);    
