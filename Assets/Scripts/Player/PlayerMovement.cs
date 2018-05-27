@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnitySampleAssets.CrossPlatformInput;
+using UnityEngine.Networking;
 
 namespace CompleteProject
 {
-    public class PlayerMovement : MonoBehaviour
+	public class PlayerMovement : NetworkBehaviour
     {
         public float speed = 6f;            // The speed that the player will move at.
 
@@ -31,6 +32,12 @@ namespace CompleteProject
 
         void FixedUpdate ()
         {
+			// permit each player to control his own character
+			if (!isLocalPlayer)
+			{
+				return;
+			}
+
             // Store the input axes.
             float h = CrossPlatformInputManager.GetAxisRaw("Horizontal");
             float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
