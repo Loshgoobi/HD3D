@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    public GameObject enemy;
-    public float spawnTime = 6f;
+    public GameObject enemyMutan;
+    public GameObject enemyVampire;
+
+    public float spawnTime;
     public Transform[] spawnPoints;
+    public bool flag;
 
 	void Start () {
         InvokeRepeating("Spawn", spawnTime, spawnTime);
+        flag = false;
 	}
 	
     
 	void Spawn () {
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-
-
-        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-
+        if (flag == true)
+        {
+            Instantiate(enemyMutan, spawnPoints[spawnPointIndex].position , spawnPoints[spawnPointIndex].rotation);
+            flag = false;
+            return;
+            
+        }
+        if (flag == false)
+        {
+            Instantiate(enemyVampire, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            flag = true;
+            return;
+        }
 
     }
     
