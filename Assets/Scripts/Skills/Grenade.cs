@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Grenade : MonoBehaviour {
 
     public float delay = 3.0f;
@@ -13,6 +14,7 @@ public class Grenade : MonoBehaviour {
 
     private GameObject instantiatedEffect;
     private ParticleSystem ps;
+    private AudioSource source;
 
     float countdown;
     bool hasExploded = false;
@@ -22,7 +24,7 @@ public class Grenade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         countdown = delay;
-        
+        source = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -44,7 +46,8 @@ public class Grenade : MonoBehaviour {
     {
         instantiatedEffect = Instantiate(explosionEffect, transform.position, transform.rotation);
         ps = instantiatedEffect.GetComponent<ParticleSystem>();
-
+        Debug.Log("audio source" + source.name);
+        GetComponent<AudioSource>().Play();
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 

@@ -80,8 +80,8 @@ public class AbilityCoolDown : MonoBehaviour
         coolDownTextDisplay.enabled = true;
 
         //abilitySource.clip = ability.aSound;
-        //abilitySource.Play();
-        //Debug.Log("mana cost" + ability.manaCost);
+        abilitySource.Play();
+        Debug.Log("ability source clip " + abilitySource.name);
         manaP.SpendMana(ability.manaCost);
         //Debug.Log("mana spent");
         ability.TriggerAbility();

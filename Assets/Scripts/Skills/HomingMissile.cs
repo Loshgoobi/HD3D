@@ -19,15 +19,21 @@ public class HomingMissile : MonoBehaviour
     private Transform target;
     private GameObject instantiatedEffect;
     private ParticleSystem ps;
+    private AudioSource abilitySource;
 
 
     // Use this for initialization
     void Start()
     {
+        abilitySource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         missile = GetComponent<Transform>();
         target = FindClosestToTarget(missile, "Enemy").transform;
-        Debug.Log("Enemy : " + target.name);
+        //Debug.Log("Enemy : " + target.name);
+        if(!target)
+        {
+            target = FindClosestToTarget(missile, "BigEnemy").transform;
+        }
     }
 
     void FixedUpdate()
@@ -37,18 +43,19 @@ public class HomingMissile : MonoBehaviour
         Vector3 rotateAmount = Vector3.Cross(transform.forward, direction);
         rb.angularVelocity = rotateAmount * rotateSpeed;
         rb.velocity = transform.forward * speed;
-        Debug.Log("target name : " + target.name);
-        if (target.name == null)
+        //Debug.Log("target name : " + target.name);
+        target = FindClosestToTarget(missile, "Enemy").transform;
+        //Debug.Log("Enemy : " + target.name);
+        if (!target)
         {
-            Explode();
-            Destroy(gameObject);
+            target = FindClosestToTarget(missile, "BigEnemy").transform;
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.tag);
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "BigEnemy")
         {
             //Debug.Log("Enemy collision is present!");
             Explode();

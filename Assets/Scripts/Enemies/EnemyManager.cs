@@ -11,13 +11,24 @@ public class EnemyManager : MonoBehaviour {
     public Transform[] spawnPoints;
     public bool flag;
 
+    public int waveNumberWin;
+
+    private int currentWaveNumber;
+
 	void Start () {
         InvokeRepeating("Spawn", spawnTime, spawnTime);
         flag = false;
+        currentWaveNumber = 0;
 	}
-	
-    
-	void Spawn () {
+
+    private void Update()
+    {
+        if(currentWaveNumber == waveNumberWin)
+        {
+            gameObject.SetActive(false);  
+        }
+    }
+    void Spawn () {
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
         if (flag == true)
         {
@@ -32,7 +43,7 @@ public class EnemyManager : MonoBehaviour {
             flag = true;
             return;
         }
-
+        currentWaveNumber++;
     }
     
 }

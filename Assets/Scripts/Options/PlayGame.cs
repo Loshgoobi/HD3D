@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayGame : MonoBehaviour {
 
 	public void Play() {
-		SceneManager.LoadScene (1, LoadSceneMode.Single); //à changer avec le nom de la scene de jeu
+        Debug.Log("Clicked");
+		SceneManager.LoadScene ("t6"); //à changer avec le nom de la scene de jeu
 	}
 }

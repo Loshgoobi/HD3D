@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Missile
   m_EditorClassIdentifier: 
   aName: Missile
-  aSprite: {fileID: 0}
+  aSprite: {fileID: 21300000, guid: e6e95556c41d0fc44b945c7601c20c03, type: 3}
   aSound: {fileID: 0}
   aBaseCoolDown: 20
-  manaCost: 20
+  manaCost: 40
   missile: {fileID: 54601891752389936, guid: 3db888a07c8c1ae42b3ff9ff707231d0, type: 2}

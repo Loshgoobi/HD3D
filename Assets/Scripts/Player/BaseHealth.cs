@@ -30,6 +30,7 @@ using UnityEngine.SceneManagement;
         bool isDead;                                                // Whether the player is dead.
         bool damaged;                                               // True when the player gets damaged.
 
+        private int stage;
 
         void Awake ()
         {
@@ -42,6 +43,8 @@ using UnityEngine.SceneManagement;
             boxCollider = GetComponent <BoxCollider> ();
             // Set the initial health of the player.
             currentHealth = startingHealth;
+            healthSlider.value = currentHealth;
+            stage = 0;
         }
 
 
@@ -64,12 +67,31 @@ using UnityEngine.SceneManagement;
             damaged = false;
         }
 
+    void OnTriggerEnter(Collider other)
+    {
+        // If the entering collider is the base...
+        if (other.tag == "Enemy")
+        {
+            
+            //Debug.Log("In collider");
+            TakeDamage(15);
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "BigEnemy")
+        {
 
-        public void TakeDamage (int amount)
+            //Debug.Log("In collider");
+            TakeDamage(50);
+            Destroy(other.gameObject);
+        }
+    }
+
+
+    public void TakeDamage (int amount)
         {
             // Set the damaged flag so the screen will flash.
             damaged = true;
-            Debug.Log("Damage amount : " + amount);
+            //Debug.Log("Damage amount : " + amount);
             // Reduce the current health by the damage amount.
             currentHealth -= amount;
 
@@ -79,25 +101,25 @@ using UnityEngine.SceneManagement;
             // Play the hurt sound effect.
             //playerAudio.Play ();
 
-            if( currentHealth <= firstStage && currentHealth > secondStage)
+            if( currentHealth <= firstStage && currentHealth > secondStage && stage == 0 )
             {
-                destructionParticles.Play();
-                Destroy(fullhealth, destructionParticles.duration);
+                //destructionParticles.Play();
+                Destroy(fullhealth);
                 firstStageObj.SetActive(true);
-
+                stage = 1;
             }
-            else if (currentHealth <= secondStage && !isDead)
+            else if (currentHealth <= secondStage && !isDead && stage == 1)
             {
-                destructionParticles.Play();
-                Destroy(firstStageObj, destructionParticles.duration);
+                //destructionParticles.Play();
+                Destroy(firstStageObj);
                 secondStageObj.SetActive(true);
             }
 
             // If the player has lost all it's health and the death flag hasn't been set yet...
             if(currentHealth <= 0 && !isDead)
             {
-                destructionParticles.Play();
-                Destroy(secondStageObj, destructionParticles.duration);
+                //destructionParticles.Play();
+                Destroy(secondStageObj);
                 destroyed.SetActive(true);
                 // ... it should die.
                 Death ();

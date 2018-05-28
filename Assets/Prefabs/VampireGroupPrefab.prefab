@@ -665,7 +665,6 @@ GameObject:
   - component: {fileID: 114028266172792756}
   - component: {fileID: 136587093485482220}
   - component: {fileID: 135193428251577794}
-  - component: {fileID: 114172980960232392}
   m_Layer: 8
   m_Name: vampirePrefab (3)
   m_TagString: Enemy
@@ -1204,7 +1203,6 @@ GameObject:
   - component: {fileID: 114937167308541864}
   - component: {fileID: 136318359545648202}
   - component: {fileID: 135741034507121058}
-  - component: {fileID: 114495243520732146}
   m_Layer: 8
   m_Name: vampirePrefab (4)
   m_TagString: Enemy
@@ -1815,9 +1813,7 @@ GameObject:
   - component: {fileID: 195480815440347096}
   - component: {fileID: 114947432244473184}
   - component: {fileID: 136576646907423874}
-  - component: {fileID: 135013939441162832}
   - component: {fileID: 135382275624334236}
-  - component: {fileID: 114417720383487576}
   m_Layer: 8
   m_Name: vampirePrefab (2)
   m_TagString: Enemy
@@ -4074,7 +4070,7 @@ GameObject:
   - component: {fileID: 4220676339880042}
   m_Layer: 8
   m_Name: VampireGroupPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4593,7 +4589,6 @@ GameObject:
   - component: {fileID: 114132498724598478}
   - component: {fileID: 136850385670456554}
   - component: {fileID: 135633392494734078}
-  - component: {fileID: 114574455383063792}
   m_Layer: 8
   m_Name: vampirePrefab (5)
   m_TagString: Enemy
@@ -5726,7 +5721,6 @@ GameObject:
   - component: {fileID: 114246017577465516}
   - component: {fileID: 136743307284189264}
   - component: {fileID: 135196306698444526}
-  - component: {fileID: 114636493323043418}
   m_Layer: 8
   m_Name: vampirePrefab
   m_TagString: Enemy
@@ -6105,7 +6099,6 @@ GameObject:
   - component: {fileID: 114664417994506986}
   - component: {fileID: 136937932165538274}
   - component: {fileID: 135601428564959764}
-  - component: {fileID: 114842773445277638}
   m_Layer: 8
   m_Name: vampirePrefab (1)
   m_TagString: Enemy
@@ -8365,7 +8358,6 @@ GameObject:
   - component: {fileID: 114658351860366734}
   - component: {fileID: 136922502959473236}
   - component: {fileID: 135124862335933870}
-  - component: {fileID: 114673883301548308}
   m_Layer: 8
   m_Name: vampirePrefab (9)
   m_TagString: Enemy
@@ -9518,7 +9510,6 @@ GameObject:
   - component: {fileID: 114057349306285224}
   - component: {fileID: 136331415570422148}
   - component: {fileID: 135931243558102060}
-  - component: {fileID: 114113294927501598}
   m_Layer: 8
   m_Name: vampirePrefab (7)
   m_TagString: Enemy
@@ -9662,7 +9653,6 @@ GameObject:
   - component: {fileID: 114675178261089160}
   - component: {fileID: 136296653971967490}
   - component: {fileID: 135489509833468462}
-  - component: {fileID: 114716748123039130}
   m_Layer: 8
   m_Name: vampirePrefab (6)
   m_TagString: Enemy
@@ -9790,7 +9780,6 @@ GameObject:
   - component: {fileID: 114383416251487258}
   - component: {fileID: 136951359096391274}
   - component: {fileID: 135294809761083722}
-  - component: {fileID: 114080744779752450}
   m_Layer: 8
   m_Name: vampirePrefab (8)
   m_TagString: Enemy
@@ -13293,7 +13282,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377960422935494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.889566, y: 2.53, z: -12.788759}
+  m_LocalPosition: {x: -43.759747, y: 3.02, z: -13.512441}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4666988499208100}
@@ -21207,7 +21196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -21245,7 +21234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -21291,9 +21280,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21366,9 +21355,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21385,18 +21374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18f76f5f5792a3478995705de8e0f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114080744779752450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889079691548404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114085230791405668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21467,18 +21444,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114113294927501598
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1865762833489992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114120570328230206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21501,7 +21466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -21544,18 +21509,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114172980960232392
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1071364278330836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114181825786837784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21596,9 +21549,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21664,7 +21617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  currentHealth: 100
+  currentHealth: 200
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 0}
@@ -21709,9 +21662,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21784,9 +21737,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21913,9 +21866,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21932,24 +21885,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 0}
   healthSlider: {fileID: 114181825786837784}
---- !u!114 &114417720383487576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1181167007960588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114431306108871910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22053,30 +21994,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114495243520732146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114184732513246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
---- !u!114 &114574455383063792
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1423900617650404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114574905601332184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22128,9 +22045,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22293,18 +22210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18f76f5f5792a3478995705de8e0f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114636493323043418
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538032886489472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114658351860366734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22316,7 +22221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -22334,23 +22239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  currentHealth: 100
+  currentHealth: 200
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 0}
   healthSlider: {fileID: 114830610757494944}
---- !u!114 &114673883301548308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1779333386453480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114675178261089160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22362,7 +22255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -22424,9 +22317,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22491,18 +22384,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114716748123039130
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1873459449081526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114717003701872004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22619,9 +22500,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22732,9 +22613,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22772,18 +22653,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114842773445277638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1560620675583126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 15
 --- !u!114 &114848130031566044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22993,7 +22862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -23010,7 +22879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e24dae55c5f854bb70344e22fd1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 200
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
@@ -23080,18 +22949,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!135 &135013939441162832
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1181167007960588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.76
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!135 &135124862335933870
 SphereCollider:
   m_ObjectHideFlags: 1
