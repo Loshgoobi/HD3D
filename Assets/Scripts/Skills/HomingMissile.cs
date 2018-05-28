@@ -6,8 +6,6 @@ using UnityEngine;
 public class HomingMissile : MonoBehaviour
 {
 
-    
-    
     public float speed = 5f;
     public float rotateSpeed = 200f;
     public float radius = 5.0f;
@@ -39,12 +37,24 @@ public class HomingMissile : MonoBehaviour
         Vector3 rotateAmount = Vector3.Cross(transform.forward, direction);
         rb.angularVelocity = rotateAmount * rotateSpeed;
         rb.velocity = transform.forward * speed;
+        Debug.Log("target name : " + target.name);
+        if (target.name == null)
+        {
+            Explode();
+            Destroy(gameObject);
+        }
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Explode();
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.tag == "Enemy")
+        {
+            //Debug.Log("Enemy collision is present!");
+            Explode();
+            Destroy(gameObject);
+        }
+        
     }
 
     GameObject FindClosestToTarget(Transform target, string tag)

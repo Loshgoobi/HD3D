@@ -21396,8 +21396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114085230791405668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21479,8 +21478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114120570328230206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21557,8 +21555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114181825786837784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21952,8 +21949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114431306108871910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22068,8 +22064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114574455383063792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22081,8 +22076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114574905601332184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22310,8 +22304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114658351860366734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22357,8 +22350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114675178261089160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22510,8 +22502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114717003701872004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22792,8 +22783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 15
 --- !u!114 &114848130031566044
 MonoBehaviour:
   m_ObjectHideFlags: 1

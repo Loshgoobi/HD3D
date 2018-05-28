@@ -31,6 +31,7 @@ using System.Collections;
             // If the entering collider is the base...
             if(other.gameObject == homeBase)
             {
+            Debug.Log("In collider");
                 // ... the player is in range.
                 playerInRange = true;
                 Debug.Log("In range");
@@ -70,13 +71,13 @@ using System.Collections;
         }
 
 
-        void Attack ()
+        public void Attack ()
         {
          
             // If the player has health to lose...
             if(baseHealth.currentHealth > 0)
             {
-            // ... damage the player.
+            // ... damage the base.
             baseHealth.TakeDamage (attackDamage);
             Destroy(gameObject);
             }

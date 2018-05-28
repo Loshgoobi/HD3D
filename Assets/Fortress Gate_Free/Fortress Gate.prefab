@@ -978,11 +978,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148104}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.456974, y: 12.288976, z: 18.555065}
-  m_Center: {x: 0.000052618616, y: -1.1824726, z: 0.00000072791755}
+  m_Size: {x: 20.456974, y: 12.562688, z: 18.555065}
+  m_Center: {x: 0.00005261713, y: -1.3193297, z: 0.00000072046095}
 --- !u!95 &95472513973488688
 Animator:
   serializedVersion: 3

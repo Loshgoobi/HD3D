@@ -5202,7 +5202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 50
 --- !u!114 &114052350466238104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5525,7 +5525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 50
 --- !u!114 &114365468317879136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5650,7 +5650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 50
 --- !u!114 &114535528829236844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5679,7 +5679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b494ad2c7c65a45bc2cd61586a92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 50
 --- !u!114 &114550988272060978
 MonoBehaviour:
   m_ObjectHideFlags: 1

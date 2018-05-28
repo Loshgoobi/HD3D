@@ -73,7 +73,7 @@ public class AbilityCoolDown : MonoBehaviour
     private void ButtonTriggered()
     {
         Debug.Log("button triggered");
-        Debug.Log("mana cost" + ability.manaCost);
+        //Debug.Log("mana cost" + ability.manaCost);
         nextReadyTime = coolDownDuration + Time.time;
         coolDownTimeLeft = coolDownDuration;
         darkMask.enabled = true;
@@ -81,9 +81,9 @@ public class AbilityCoolDown : MonoBehaviour
 
         //abilitySource.clip = ability.aSound;
         //abilitySource.Play();
-        Debug.Log("mana cost" + ability.manaCost);
+        //Debug.Log("mana cost" + ability.manaCost);
         manaP.SpendMana(ability.manaCost);
-        Debug.Log("mana spent");
+        //Debug.Log("mana spent");
         ability.TriggerAbility();
         Debug.Log("Triggered");
     }

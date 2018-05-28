@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-using UnityEngine;
-using System.Collections;
 
 public class EnemyMove : MonoBehaviour
 {
     Transform target;               // Reference to the target's position.
     EnemyHealth enemyHealth;        // Reference to this enemy's health.
     NavMeshAgent nav;               // Reference to the nav mesh agent.
+    //EnemyAttack enemyAttack;
 
 
     void Start()
@@ -19,7 +18,7 @@ public class EnemyMove : MonoBehaviour
         // Set up the references.
         target = GameObject.FindGameObjectWithTag("Target").transform;
 
-
+        //enemyAttack = GetComponent<EnemyAttack>();
         nav = GetComponent<NavMeshAgent>();
         nav.SetDestination(target.position);
         Debug.Log("Destination : " + nav.destination);
@@ -34,6 +33,7 @@ public class EnemyMove : MonoBehaviour
         float dist = Vector3.Distance(target.transform.position, transform.position);
         if (dist <= 1.0f)
         {
+            //enemyAttack.Attack();
             Destroy(gameObject);
         }
     }

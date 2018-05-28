@@ -69,7 +69,7 @@ using UnityEngine.SceneManagement;
         {
             // Set the damaged flag so the screen will flash.
             damaged = true;
-
+            Debug.Log("Damage amount : " + amount);
             // Reduce the current health by the damage amount.
             currentHealth -= amount;
 
